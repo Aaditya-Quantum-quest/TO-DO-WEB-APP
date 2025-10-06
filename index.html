@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> TO DO APP </title>
+    <title>Modern TO DO APP</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -12,21 +12,38 @@
 <body>
     <div class="main-container">
         <div class="to-do-app">
-            <h1>TO-DO APP</h1>
-            <form action="" class="input-area">
-                <input type="text" id="user-input" autocomplete="off" autocorrect="on" placeholder="Add a new Task...">
-                <button type="button" id="add-task-btn"><i class="fa-solid fa-plus"></i></button>
+            <h1>✨ TO-DO APP</h1>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number" id="total-tasks">0</div>
+                    <div class="stat-label">Total</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="completed-tasks">0</div>
+                    <div class="stat-label">Completed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="pending-tasks">0</div>
+                    <div class="stat-label">Pending</div>
+                </div>
+            </div>
+
+            <form class="input-area">
+                <input type="text" id="user-input" autocomplete="off" placeholder="Add a new task...">
+                <button type="button" id="add-task-btn">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
             </form>
+
             <div class="to-do-container">
-                <ul id="task-list">
-                    <!-- <li> HTML </li>
-                    <li> CSS </li>
-                    <li> JAVASCRIPT </li> -->
-                </ul>
-                <img src="images_preview_rev_1.png" alt="">
+                <ul id="task-list"></ul>
+                <div class="empty-state" id="empty-state">
+                    <i class="fa-solid fa-clipboard-list"></i>
+                    <p>No tasks yet. Add one to get started!</p>
+                </div>
             </div>
         </div>
-
     </div>
 
     <script src="script.js"></script>
